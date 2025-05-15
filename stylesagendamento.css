@@ -1,118 +1,113 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #eaf7f3;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #eaf7f3;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  position: relative;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+.logo-link {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1000;
 }
 
-header {
-    background-color: #A8D5BA;
-    color: #fff;
-    padding: 20px 0;
-    border-bottom: 4px solid #6a9a6b;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.logo {
+  width: 50px;
+  height: auto;
+  display: block;
 }
 
-header .logo-link {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-header .logo {
-    width: 50px;
-    height: auto;
-}
-
-section {
-    padding: 30px 0;
-    margin-top: -20px;
-    text-align: center;
-}
-
-section h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #3A5A40;
+.titulo-form {
+  text-align: center;
+  color: #3A5A40;
+  margin-bottom: 20px;
+  margin-top: 0;
 }
 
 form {
-    background-color: #A8D5BA;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+  background-color: #A8D5BA;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-form div {
-    margin-bottom: 15px;
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #3A5A40;
 }
 
-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1rem;
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
 }
 
-form input, form select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    background-color: #fff;
+input[type="file"] {
+  margin-top: 10px;
 }
 
-form button {
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    background-color: #6a9a6b;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.checkbox-group {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
-form button:hover {
-    background-color: #4F6C4F;
+.checkbox-group label {
+  font-weight: normal;
+  color: #3A5A40;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
-footer {
-    background-color: #A8D5BA;
-    color: #333;
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+.checkbox-group input[type="checkbox"] {
+  margin: 0;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
 }
 
-footer .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+.checkbox-label.morning,
+.checkbox-label.afternoon {
+  position: relative;
+  top: -3px;
 }
 
-footer p {
-    font-size: 0.9rem;
-    margin: 0;
-    color: black;
+button {
+  margin-top: 25px;
+  background-color: #6a9a6b;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #4F6C4F;
 }
