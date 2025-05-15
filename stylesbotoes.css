@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaf7f3;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.logo-link {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  display: block;
+}
+
+h1 {
+  color: #3A5A40;
+  margin-bottom: 20px;
+}
+
+.btn-group {
+  margin-top: 40px;
+}
+
+.btn-group button {
+  background-color: #6a9a6b;
+  color: white;
+  padding: 15px 25px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-group button:hover {
+  background-color: #4F6C4F;
+}
