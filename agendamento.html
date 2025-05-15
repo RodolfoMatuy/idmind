@@ -24,7 +24,16 @@
     <input type="email" id="email" name="email" required />
 
     <label for="convenio">Convênio:</label>
-    <input type="text" id="convenio" name="convenio" />
+    <select id="convenio" name="convenio" required>
+            <option value="Particular" class="bold-option">Particular</option>
+            <option value="Amil">Amil</option>
+            <option value="Bradesco Saúde">Bradesco Saúde</option>
+            <option value="NotreDame Intermédica">NotreDame Intermédica</option>
+            <option value="SulAmérica">SulAmérica</option>
+            <option value="Unimed">Unimed</option>
+            <option value="Porto Seguro Saúde">Porto Seguro Saúde</option>
+            <option value="Outros">Outros</option>
+    </select>
 
     <label for="laudo">Laudo (anexar imagem):</label>
     <input type="file" id="laudo" name="laudo" accept="image/*" />
