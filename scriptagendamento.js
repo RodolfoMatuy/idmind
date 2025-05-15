@@ -1,4 +1,3 @@
-// Máscara simples para telefone brasileiro
 const telefoneInput = document.getElementById('telefone');
 
 telefoneInput.addEventListener('input', function(e) {
@@ -34,7 +33,7 @@ document.getElementById('laudo').addEventListener('change', function(event) {
 });
 
 document.getElementById('formAgendamento').addEventListener('submit', async function(e) {
-  e.preventDefault(); // Impede o envio padrão
+  e.preventDefault();
 
   const form = e.target;
 
