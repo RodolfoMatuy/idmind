@@ -76,7 +76,7 @@ header nav ul li a:hover {
         position: absolute;
         top: 70px;
         right: 20px;
-        background: #fff;
+        background: #A8D5BA; /* fundo verde para mobile */
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
         border-radius: 10px;
         width: 200px;
@@ -95,6 +95,14 @@ header nav ul li a:hover {
 
     header nav ul li {
         margin-bottom: 10px;
+    }
+
+    header nav ul li a {
+        color: #fff !important;
+    }
+
+    header nav ul li a:hover {
+        color: #6a9a6b !important;
     }
 }
 
