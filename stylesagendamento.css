@@ -144,3 +144,7 @@ button:hover {
     font-size: 0.95rem;
   }
 }
+
+.bold-option {
+  font-weight: bold;
+}
