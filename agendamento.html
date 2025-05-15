@@ -1,42 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento - Id Mind</title>
-    <link rel="stylesheet" href="stylesagendamento.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agendamento</title>
+  <link rel="stylesheet" href="stylesagendamento.css" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo-link">
-                <img src="logo.png" alt="Logo ID Mind" class="logo">
-            </a>
-        </div>
-    </header>
+  <a href="index.html" class="logo-link">
+    <img src="logo.png" alt="Logo da empresa" class="logo" />
+  </a>
 
-    <section id="agendamento">
-        <div class="container">
-            <h2>Formulário de Agendamento</h2>
-            <form id="formAgendamento" action="https://formspree.io/f/xldbwglr" method="POST">
-                <div>
-                    <label for="nome">Nome completo:</label>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
+  <h2 class="titulo-form">Formulário de Agendamento</h2>
+  
+  <form id="formAgendamento" action="https://formspree.io/f/xldbwglr" method="POST" enctype="multipart/form-data">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required />
 
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" required />
 
-                <div>
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" required placeholder="(XX) XXXXX-XXXX">
-                </div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
 
-                <div>
-                    <label for="estado">Estado:</label>
-                    <select id="estado" name="estado" required onchange="carregarCidades()">
+    <label for="convenio">Convênio:</label>
+    <input type="text" id="convenio" name="convenio" />
+
+    <label for="laudo">Laudo (anexar imagem):</label>
+    <input type="file" id="laudo" name="laudo" accept="image/*" />
+    <img id="preview" src="" alt="Prévia da imagem" style="display:none; max-width: 100%; margin-top: 10px; border-radius: 8px;" />
+
+    <label for="estado">Estado:</label>
+    <select id="estado" name="estado" required onchange="carregarCidades()">
                         <option value="">Selecione seu estado</option>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
@@ -66,53 +61,24 @@
                         <option value="SE">Sergipe</option>
                         <option value="TO">Tocantins</option>
                     </select>
-                </div>
 
-                <div>
-                    <label for="cidade">Cidade:</label>
-                    <input type="text" id="cidade" name="cidade" required placeholder="Digite sua cidade">
-                </div>
+    <label for="cidade">Cidade:</label>
+    <input type="text" id="cidade" name="cidade" required />
 
-                <div>
-                    <label for="laudo">Possui laudo médico?</label>
-                    <select id="laudo" name="laudo">
-                        <option value="sim">Sim</option>
-                        <option value="nao">Não</option>
-                    </select>
-                </div>
+    <div class="checkbox-group">
+      <label class="checkbox-label morning">
+        <input type="checkbox" name="horarios" value="manha" />
+        Manhã
+      </label>
+      <label class="checkbox-label afternoon">
+        <input type="checkbox" name="horarios" value="tarde" />
+        Tarde
+      </label>
+    </div>
 
-                <div>
-                    <label for="reembolso">Possui reembolso do plano de saúde?</label>
-                    <select id="reembolso" name="reembolso">
-                        <option value="sim">Sim</option>
-                        <option value="nao">Não</option>
-                    </select>
-                </div>
+    <button type="submit">Enviar</button>
+  </form>
 
-                <div>
-                    <label for="plano">Qual o plano de saúde: (opcional)</label>
-                    <input type="text" id="plano" name="plano">
-                </div>
-
-                <div>
-                    <label for="particular">Particular?</label>
-                    <select id="particular" name="particular">
-                        <option value="sim">Sim</option>
-                        <option value="nao">Não</option>
-                    </select>
-                </div>
-
-                <button type="submit">Enviar Agendamento</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p style="color: black; font-size: 0.9rem;">&copy; 2025 Recriar Psicologia. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <script src="scriptagendamento.js"></script>
+  <script src="scriptagendamento.js"></script>
 </body>
 </html>
